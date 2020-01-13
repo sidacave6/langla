@@ -1,0 +1,1559 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: OpenSans-Semibold;
+    src: url(../fonts/OpenSans-Semibold.ttf)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none
+}
+
+.rs {
+    margin: 0;
+    padding: 0
+}
+
+li {
+    list-style: none
+}
+
+ul {
+    padding: 0;
+    margin: 0
+}
+
+.pa {
+    position: absolute
+}
+
+.pr {
+    position: relative
+}
+
+.px {
+    position: fixed
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0 auto;
+    background: #fff;
+    color: #000;
+    //font-family: OpenSans-Regular, sans-serif;
+    overflow-x: hidden;
+    font-size: .72917vw
+}
+
+.fixCen {
+    width: 1200px;
+    position: relative;
+    margin: auto
+}
+
+@media (max-width:1280px) {
+    .fixCen {
+        width: 100%;
+        padding: 0 1.5625vw
+    }
+}
+
+.gameList .showGames .gameBlock {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+.trans05 {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease
+}
+
+.imgFull {
+    width: 100%;
+    height: auto
+}
+
+header {
+    width: 100%;
+    height: 56px;
+    padding: 18px;
+    background: #2ea813
+}
+
+header .btnOpenMenu {
+    background: url(../images/btn_open.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 1.45833vw;
+    display: inline-block;
+    vertical-align: middle
+}
+
+header .txt {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .72917vw;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1.04167vw
+}
+
+header .menuHide {
+    z-index: 1;
+    top: 0;
+    width: 18.75vw;
+    font-size: .72917vw;
+    min-height: 26.82292vw;
+    padding-top: 2.60417vw
+}
+
+header .menuHide ul {
+    background: #24830f;
+    width: 18.75vw;
+    padding: 0 2.08333vw
+}
+
+header .menuHide ul li {
+    width: 100%;
+    height: 2.60417vw;
+    line-height: 2.60417vw;
+    border-bottom: thin solid #509c3f
+}
+
+header .menuHide ul li:last-child {
+    border: none
+}
+
+header .menuHide ul li a {
+    color: #fff
+}
+
+header .menuHide ul li a:hover {
+    color: #fffc00
+}
+
+header .menuLeft {
+    background: #24830f;
+    left: -18.75vw;
+    z-index: 2
+}
+
+header .menuLeft.active {
+    left: 0
+}
+
+header .menuLeft .btnCloseMenu {
+    background: url(../images/btn_close.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    width: 1.45833vw;
+    height: 1.25vw;
+    display: block;
+    position: absolute;
+    top: .67708vw;
+    left: 2.08333vw
+}
+
+header .menuLeft ul {
+    left: 0
+}
+
+header .menuLeft ul li a .icon {
+    display: inline-block;
+    width: .9375vw;
+    margin-right: 1.04167vw
+}
+
+header .menuRight {
+    right: 0;
+    pointer-events: none
+}
+
+header .menuRight .btnLogin {
+    width: .9375vw;
+    top: .67708vw;
+    right: 2.08333vw;
+    z-index: 2;
+    pointer-events: visible
+}
+
+header .menuRight .afterLogin {
+    height: 2.60417vw;
+    width: 100%;
+    top: 0;
+    right: -18.75vw;
+    color: #fff
+}
+
+header .menuRight .afterLogin .menuAfterLogin {
+    pointer-events: visible;
+    background: #24830f;
+    top: 2.60417vw;
+    width: 100%;
+    right: -18.75vw;
+    height: 24.21875vw
+}
+
+header .menuRight .afterLogin .menuAfterLogin .icon {
+    margin: 0 0 0 .26042vw
+}
+
+header .menuRight .afterLogin .helloUser {
+    height: 2.60417vw;
+    line-height: 2.60417vw;
+    background: #2ea813;
+    text-align: right;
+    padding-right: 2.08333vw
+}
+
+header .menuRight .afterLogin span {
+    display: inline-block;
+    margin-right: .26042vw
+}
+
+header .menuRight .afterLogin .icon {
+    width: .83333vw
+}
+
+header .menuRight .afterLogin .userName {
+    pointer-events: visible;
+    font-weight: 700;
+    cursor: pointer
+}
+
+header .menuRight .afterLogin .userName:hover {
+    color: #fffc00
+}
+
+header .menuRight .afterLogin .userName:after {
+    content: '';
+    height: 0;
+    width: 0;
+    display: inline-block;
+    margin-left: .26042vw;
+    border-left: .26042vw solid transparent;
+    border-right: .26042vw solid transparent;
+    border-top: .26042vw solid #4ae627;
+    vertical-align: middle
+}
+
+header .menuRight .afterLogin.active {
+    right: 0;
+    z-index: 3
+}
+
+header .menuRight .afterLogin:hover .menuAfterLogin {
+    right: 0
+}
+
+#slider {
+    width: 100%;
+    height: 24.27083vw
+}
+
+#slider .item {
+    height: 24.27083vw
+}
+
+#slider .owl-controls {
+    width: 100%;
+    height: 3.38542vw;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1.66667vw;
+    pointer-events: none
+}
+
+#slider .owl-controls .owl-buttons {
+    width: 100%;
+    height: 100%
+}
+
+#slider .owl-controls .owl-buttons>div {
+    background: url(../images/btn_next.png) no-repeat;
+    -webkit-background-size: 100%!important;
+    background-size: 100%!important;
+    width: 1.77083vw;
+    height: 3.38542vw;
+    position: absolute;
+    pointer-events: visible;
+    font-size: 0
+}
+
+#slider .owl-controls .owl-buttons .owl-next {
+    right: 3.125vw;
+    background: url(../images/btn_next.png) no-repeat
+}
+
+#slider .owl-controls .owl-buttons .owl-prev {
+    left: 3.125vw;
+    background: url(../images/btn_prev.png) no-repeat
+}
+
+#notify {
+    background: #ececec;
+    height: 2.60417vw;
+    line-height: 2.60417vw
+}
+
+#notify .txtNotify {
+    margin-left: 4.6875vw
+}
+
+#notify .i_hot {
+    width: 4.16667vw;
+    top: -1.04167vw;
+    z-index: 10;
+}
+
+.gameList {
+    margin-top: 2.60417vw
+}
+
+.gameList .caption {
+    font-size: 1.66667vw;
+    color: #24830f;
+    text-transform: uppercase;
+    line-height: initial
+}
+
+.gameList #searchGame {
+    top: 0;
+    right: 0
+}
+
+.gameList #searchGame input {
+    width: 20.83333vw;
+    height: 1.82292vw;
+    padding-left: .52083vw;
+    border: thin solid green;
+    background: url(../images/i_search.png) 96% center no-repeat;
+    -webkit-background-size: 5%;
+    background-size: 5%
+}
+
+.gameList #searchGame input::placeholder {
+    color: #000
+}
+
+.gameList #searchGame input::-ms-input-placeholder {
+    color: #000
+}
+
+.gameList #searchGame input::-moz-placeholder {
+    color: #000
+}
+
+.gameList #searchGame input::-webkit-input-placeholder {
+    color: #000
+}
+
+.gameList .showGames {
+    margin-top: 1.5625vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameList .showGames .gameBlock {
+    padding: 1.5625vw 0;
+    border-bottom: thin solid #e0e0e0
+}
+
+.gameList .showGames .gameBlock:last-child {
+    border: none
+}
+
+.gameList .showGames .gameBlock .game {
+    width: 20%
+}
+
+.gameList .showGames .gameBlock .game .game_icon {
+    width: 7.8125vw;
+    display: block;
+    margin: auto
+}
+
+.gameList .showGames .gameBlock .game .game_icon img {
+    -webkit-border-radius: 2.08333vw;
+    -moz-border-radius: 2.08333vw;
+    border-radius: 2.08333vw
+}
+
+.gameList .showGames .gameBlock .game .game_name {
+    color: #24830f;
+    padding: 0 .52083vw;
+    margin-top: 1.04167vw;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.gameList .showGames .gameBlock .game:hover .game_name {
+    color: #000
+}
+
+.gameList .page {
+    margin-top: 2.60417vw
+}
+
+.gameList .page ul {
+    text-align: center
+}
+
+.gameList .page ul li {
+    display: inline-block;
+    width: 1.30208vw;
+    height: 1.30208vw;
+    text-align: center;
+    line-height: 1.30208vw
+}
+
+.gameList .page ul li a,
+.gameList .page ul li span {
+    display: block;
+    color: #000
+}
+
+.gameList .page ul li a.active,
+.gameList .page ul li a:hover {
+    color: #fff;
+    background: #24830f
+}
+
+footer {
+    background: #f2f2f2;
+    color: #1e1e1e;
+    margin-top: 3.64583vw;
+    padding: 1.5625vw 0 3.125vw
+}
+
+footer .fixCen {
+    padding: 0 1.04167vw
+}
+
+@media (max-width:1280px) {
+    body,
+    html {
+        font-size: 1.09375vw
+    }
+    header {
+        height: 3.90625vw;
+        padding: 1.01563vw 3.125vw 0
+    }
+    header .btnOpenMenu {
+        width: 2.1875vw
+    }
+    header .txt {
+        font-size: 1.09375vw;
+        margin-left: 1.5625vw
+    }
+    header .menuHide {
+        width: 28.125vw;
+        font-size: 1.09375vw;
+        min-height: 40.23438vw;
+        padding-top: 3.90625vw
+    }
+    header .menuHide ul {
+        width: 28.125vw;
+        padding: 0 3.125vw
+    }
+    header .menuHide ul li {
+        height: 3.90625vw;
+        line-height: 3.90625vw
+    }
+    header .menuLeft {
+        left: -28.125vw
+    }
+    header .menuLeft .btnCloseMenu {
+        width: 2.1875vw;
+        height: 1.875vw;
+        top: 1.01563vw;
+        left: 3.125vw
+    }
+    header .menuLeft ul li a .icon {
+        width: 1.40625vw;
+        margin-right: 1.5625vw
+    }
+    header .menuRight .btnLogin {
+        width: 1.40625vw;
+        top: 1.01563vw;
+        right: 3.125vw
+    }
+    header .menuRight .afterLogin {
+        height: 3.90625vw;
+        right: -28.125vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin {
+        top: 3.90625vw;
+        right: -28.125vw;
+        height: 36.32813vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin .icon {
+        margin: 0 0 0 .39063vw
+    }
+    header .menuRight .afterLogin .helloUser {
+        height: 3.90625vw;
+        line-height: 3.90625vw;
+        padding-right: 3.125vw
+    }
+    header .menuRight .afterLogin span {
+        margin-right: .39063vw
+    }
+    header .menuRight .afterLogin .icon {
+        width: 1.25vw
+    }
+    header .menuRight .afterLogin .userName:after {
+        margin-left: .39063vw;
+        border-left: .39063vw solid transparent;
+        border-right: .39063vw solid transparent;
+        border-top: .39063vw solid #4ae627
+    }
+    #slider {
+        height: 36.40625vw
+    }
+    #slider .item {
+        height: 36.40625vw
+    }
+    #slider .owl-controls {
+        height: 5.07813vw;
+        margin-top: -2.5vw
+    }
+    #slider .owl-controls .owl-buttons>div {
+        width: 2.65625vw;
+        height: 5.07813vw
+    }
+    #slider .owl-controls .owl-buttons .owl-next {
+        right: 4.6875vw
+    }
+    #slider .owl-controls .owl-buttons .owl-prev {
+        left: 4.6875vw
+    }
+    #notify {
+        height: 3.90625vw;
+        line-height: 3.90625vw
+    }
+    #notify .txtNotify {
+        margin-left: 7.03125vw
+    }
+    #notify .i_hot {
+        width: 6.25vw;
+        top: -1.5625vw
+    }
+    .gameList {
+        margin-top: 3.90625vw
+    }
+    .gameList .caption {
+        font-size: 2.5vw
+    }
+    .gameList #searchGame {
+        right: 1.5625vw
+    }
+    .gameList #searchGame input {
+        width: 31.25vw;
+        height: 2.73438vw;
+        padding-left: .78125vw
+    }
+    .gameList .showGames {
+        margin-top: 2.34375vw
+    }
+    .gameList .showGames .gameBlock {
+        padding: 2.34375vw 0
+    }
+    .gameList .showGames .gameBlock .game .game_icon {
+        width: 11.71875vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon img {
+        -webkit-border-radius: 3.125vw;
+        -moz-border-radius: 3.125vw;
+        border-radius: 3.125vw
+    }
+    .gameList .showGames .gameBlock .game .game_name {
+        padding: 0 .78125vw;
+        margin-top: 1.5625vw
+    }
+    .gameList .page {
+        margin-top: 3.90625vw
+    }
+    .gameList .page ul li {
+        width: 1.95313vw;
+        height: 1.95313vw;
+        line-height: 1.95313vw
+    }
+    footer {
+        margin-top: 5.46875vw;
+        padding: 2.34375vw 0 4.6875vw
+    }
+    footer .fixCen {
+        padding: 0 1.5625vw
+    }
+}
+
+@media (max-width:1024px) {
+    body,
+    html {
+        font-size: 1.36719vw
+    }
+    header {
+        height: 4.88281vw;
+        padding: 1.26953vw 3.90625vw 0
+    }
+    header .btnOpenMenu {
+        width: 2.73438vw
+    }
+    header .txt {
+        font-size: 1.36719vw;
+        margin-left: 1.95313vw
+    }
+    header .menuHide {
+        width: 35.15625vw;
+        font-size: 1.36719vw;
+        min-height: 43.94531vw;
+        padding-top: 4.88281vw
+    }
+    header .menuHide ul {
+        width: 35.15625vw;
+        padding: 0 3.90625vw
+    }
+    header .menuHide ul li {
+        height: 4.88281vw;
+        line-height: 4.88281vw
+    }
+    header .menuLeft {
+        left: -35.15625vw
+    }
+    header .menuLeft .btnCloseMenu {
+        width: 2.73438vw;
+        height: 2.34375vw;
+        top: 1.26953vw;
+        left: 3.90625vw
+    }
+    header .menuLeft ul li a .icon {
+        width: 1.75781vw;
+        margin-right: 1.95313vw
+    }
+    header .menuRight .btnLogin {
+        width: 1.75781vw;
+        top: 1.26953vw;
+        right: 3.90625vw
+    }
+    header .menuRight .afterLogin {
+        height: 4.88281vw;
+        right: -35.15625vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin {
+        top: 4.88281vw;
+        right: -35.15625vw;
+        height: 39.0625vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin .icon {
+        margin: 0 0 0 .48828vw
+    }
+    header .menuRight .afterLogin .helloUser {
+        height: 4.88281vw;
+        line-height: 4.88281vw;
+        padding-right: 3.90625vw
+    }
+    header .menuRight .afterLogin span {
+        margin-right: .48828vw
+    }
+    header .menuRight .afterLogin .icon {
+        width: 1.5625vw
+    }
+    header .menuRight .afterLogin .userName:after {
+        margin-left: .48828vw;
+        border-left: .48828vw solid transparent;
+        border-right: .48828vw solid transparent;
+        border-top: .48828vw solid #4ae627
+    }
+    #slider {
+        height: 39.0625vw
+    }
+    #slider .item {
+        height: 39.0625vw
+    }
+    #slider .owl-controls {
+        height: 6.34766vw;
+        margin-top: -3.125vw
+    }
+    #slider .owl-controls .owl-buttons>div {
+        width: 3.32031vw;
+        height: 6.34766vw
+    }
+    #slider .owl-controls .owl-buttons .owl-next {
+        right: 5.85938vw
+    }
+    #slider .owl-controls .owl-buttons .owl-prev {
+        left: 5.85938vw
+    }
+    #notify {
+        height: 4.88281vw;
+        line-height: 4.88281vw
+    }
+    #notify .txtNotify {
+        margin-left: 8.78906vw
+    }
+    #notify .i_hot {
+        width: 7.8125vw;
+        top: -1.95313vw
+    }
+    .gameList {
+        margin-top: 4.88281vw
+    }
+    .gameList .caption {
+        font-size: 3.125vw
+    }
+    .gameList #searchGame {
+        right: 1.95313vw
+    }
+    .gameList #searchGame input {
+        width: 39.0625vw;
+        height: 3.41797vw;
+        padding-left: .97656vw
+    }
+    .gameList .showGames {
+        margin-top: 2.92969vw
+    }
+    .gameList .showGames .gameBlock {
+        padding: 2.92969vw 0
+    }
+    .gameList .showGames .gameBlock .game .game_icon {
+        width: 14.64844vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon img {
+        -webkit-border-radius: 3.90625vw;
+        -moz-border-radius: 3.90625vw;
+        border-radius: 3.90625vw
+    }
+    .gameList .showGames .gameBlock .game .game_name {
+        padding: 0 .97656vw;
+        margin-top: 1.95313vw
+    }
+    .gameList .page {
+        margin-top: 4.88281vw
+    }
+    .gameList .page ul li {
+        width: 2.44141vw;
+        height: 2.44141vw;
+        line-height: 2.44141vw
+    }
+    footer {
+        margin-top: 6.83594vw;
+        padding: 2.92969vw 0 5.85938vw
+    }
+    footer .fixCen {
+        padding: 0 1.95313vw
+    }
+}
+
+@media (max-width:768px) {
+    body,
+    html {
+        font-size: 1.82292vw
+    }
+    header {
+        height: 6.51042vw;
+        padding: 1.69271vw 5.20833vw 0
+    }
+    header .btnOpenMenu {
+        width: 3.64583vw
+    }
+    header .txt {
+        font-size: 1.82292vw;
+        margin-left: 2.60417vw
+    }
+    header .menuHide {
+        width: 39.0625vw;
+        font-size: 1.82292vw;
+        min-height: 45.57292vw;
+        padding-top: 6.51042vw
+    }
+    header .menuHide ul {
+        width: 39.0625vw;
+        padding: 0 5.20833vw
+    }
+    header .menuHide ul li {
+        height: 6.51042vw;
+        line-height: 6.51042vw
+    }
+    header .menuLeft {
+        left: -39.0625vw
+    }
+    header .menuLeft .btnCloseMenu {
+        width: 3.64583vw;
+        height: 3.125vw;
+        top: 1.69271vw;
+        left: 5.20833vw
+    }
+    header .menuLeft ul li a .icon {
+        width: 2.34375vw;
+        margin-right: 2.60417vw
+    }
+    header .menuRight .btnLogin {
+        width: 2.34375vw;
+        top: 1.69271vw;
+        right: 5.20833vw
+    }
+    header .menuRight .afterLogin {
+        height: 6.51042vw;
+        right: -39.0625vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin {
+        top: 6.51042vw;
+        right: -39.0625vw;
+        height: 39.0625vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin .icon {
+        margin: 0 0 0 .65104vw
+    }
+    header .menuRight .afterLogin .helloUser {
+        height: 6.51042vw;
+        line-height: 6.51042vw;
+        padding-right: 5.20833vw
+    }
+    header .menuRight .afterLogin span {
+        margin-right: .65104vw
+    }
+    header .menuRight .afterLogin .icon {
+        width: 2.08333vw
+    }
+    header .menuRight .afterLogin .userName:after {
+        margin-left: .65104vw;
+        border-left: .65104vw solid transparent;
+        border-right: .65104vw solid transparent;
+        border-top: .65104vw solid #4ae627
+    }
+    #slider {
+        height: 39.0625vw
+    }
+    #slider .item {
+        height: 39.0625vw
+    }
+    #slider .owl-controls {
+        height: 8.46354vw;
+        margin-top: -4.16667vw
+    }
+    #slider .owl-controls .owl-buttons>div {
+        width: 4.42708vw;
+        height: 8.46354vw
+    }
+    #slider .owl-controls .owl-buttons .owl-next {
+        right: 7.8125vw
+    }
+    #slider .owl-controls .owl-buttons .owl-prev {
+        left: 7.8125vw
+    }
+    #notify {
+        height: 6.51042vw;
+        line-height: 6.51042vw
+    }
+    #notify .txtNotify {
+        margin-left: 11.71875vw
+    }
+    #notify .i_hot {
+        width: 10.41667vw;
+        top: -2.60417vw
+    }
+    .gameList {
+        margin-top: 6.51042vw
+    }
+    .gameList .caption {
+        font-size: 4.16667vw
+    }
+    .gameList #searchGame {
+        right: 2.60417vw
+    }
+    .gameList #searchGame input {
+        width: 52.08333vw;
+        height: 4.55729vw;
+        padding-left: 1.30208vw
+    }
+    .gameList .showGames {
+        margin-top: 3.90625vw
+    }
+    .gameList .showGames .gameBlock {
+        padding: 3.90625vw 0;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap
+    }
+    .gameList .showGames .gameBlock .game {
+        width: 33.33%
+    }
+    .gameList .showGames .gameBlock .game:nth-child(4),
+    .gameList .showGames .gameBlock .game:nth-child(5) {
+        margin-top: 3.90625vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon {
+        width: 19.53125vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon img {
+        -webkit-border-radius: 5.20833vw;
+        -moz-border-radius: 5.20833vw;
+        border-radius: 5.20833vw
+    }
+    .gameList .showGames .gameBlock .game .game_name {
+        padding: 0 1.30208vw;
+        margin-top: 2.60417vw
+    }
+    .gameList .page {
+        margin-top: 6.51042vw
+    }
+    .gameList .page ul li {
+        width: 3.25521vw;
+        height: 3.25521vw;
+        line-height: 3.25521vw
+    }
+    footer {
+        margin-top: 9.11458vw;
+        padding: 3.90625vw 0 7.8125vw
+    }
+    footer .fixCen {
+        padding: 0 2.60417vw
+    }
+}
+
+@media (max-width:640px) {
+    body,
+    html {
+        font-size: 2.1875vw
+    }
+    header {
+        height: 7.8125vw;
+        padding: 2.03125vw 6.25vw 0
+    }
+    header .btnOpenMenu {
+        width: 4.375vw
+    }
+    header .txt {
+        font-size: 2.1875vw;
+        margin-left: 3.125vw
+    }
+    header .menuHide {
+        width: 46.875vw;
+        font-size: 2.1875vw;
+        min-height: 50.625vw;
+        padding-top: 7.8125vw
+    }
+    header .menuHide ul {
+        width: 46.875vw;
+        padding: 0 6.25vw
+    }
+    header .menuHide ul li {
+        height: 7.8125vw;
+        line-height: 7.8125vw
+    }
+    header .menuLeft {
+        left: -46.875vw
+    }
+    header .menuLeft .btnCloseMenu {
+        width: 4.375vw;
+        height: 3.75vw;
+        top: 2.03125vw;
+        left: 6.25vw
+    }
+    header .menuLeft ul li a .icon {
+        width: 2.8125vw;
+        margin-right: 3.125vw
+    }
+    header .menuRight .btnLogin {
+        width: 2.8125vw;
+        top: 2.03125vw;
+        right: 6.25vw
+    }
+    header .menuRight .afterLogin {
+        height: 7.8125vw;
+        right: -46.875vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin {
+        top: 7.8125vw;
+        right: -46.875vw;
+        height: 42.8125vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin .icon {
+        margin: 0 0 0 .78125vw
+    }
+    header .menuRight .afterLogin .helloUser {
+        height: 7.8125vw;
+        line-height: 7.8125vw;
+        padding-right: 6.25vw
+    }
+    header .menuRight .afterLogin span {
+        margin-right: .78125vw
+    }
+    header .menuRight .afterLogin .icon {
+        width: 2.5vw
+    }
+    header .menuRight .afterLogin .userName:after {
+        margin-left: .78125vw;
+        border-left: .78125vw solid transparent;
+        border-right: .78125vw solid transparent;
+        border-top: .78125vw solid #4ae627
+    }
+    #slider {
+        height: 35vw
+    }
+    #slider .item {
+        height: 35vw
+    }
+    #slider .owl-controls {
+        height: 10.15625vw;
+        margin-top: -5vw
+    }
+    #slider .owl-controls .owl-buttons>div {
+        width: 5.3125vw;
+        height: 10.15625vw
+    }
+    #slider .owl-controls .owl-buttons .owl-next {
+        right: 9.375vw
+    }
+    #slider .owl-controls .owl-buttons .owl-prev {
+        left: 9.375vw
+    }
+    #notify {
+        height: 7.8125vw;
+        line-height: 7.8125vw
+    }
+    #notify .txtNotify {
+        margin-left: 14.0625vw
+    }
+    #notify .i_hot {
+        width: 12.5vw;
+        top: -3.125vw
+    }
+    .gameList {
+        margin-top: 7.8125vw
+    }
+    .gameList .caption {
+        font-size: 5vw
+    }
+    .gameList #searchGame {
+        right: 3.125vw
+    }
+    .gameList #searchGame input {
+        width: 39.0625vw;
+        height: 5.46875vw;
+        padding-left: 1.5625vw
+    }
+    .gameList .showGames {
+        margin-top: 4.6875vw
+    }
+    .gameList .showGames .gameBlock {
+        padding: 4.6875vw 0;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap
+    }
+    .gameList .showGames .gameBlock .game {
+        width: 33.33%
+    }
+    .gameList .showGames .gameBlock .game:nth-child(4),
+    .gameList .showGames .gameBlock .game:nth-child(5) {
+        margin-top: 4.6875vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon {
+        width: 23.4375vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon img {
+        -webkit-border-radius: 6.25vw;
+        -moz-border-radius: 6.25vw;
+        border-radius: 6.25vw
+    }
+    .gameList .showGames .gameBlock .game .game_name {
+        padding: 0 1.5625vw;
+        margin-top: 3.125vw
+    }
+    .gameList .page {
+        margin-top: 7.8125vw
+    }
+    .gameList .page ul li {
+        width: 3.90625vw;
+        height: 3.90625vw;
+        line-height: 3.90625vw
+    }
+    footer {
+        margin-top: 10.9375vw;
+        padding: 4.6875vw 0 9.375vw
+    }
+    footer .fixCen {
+        padding: 0 3.125vw
+    }
+}
+
+@media (max-width:500px) {
+    body,
+    html {
+        font-size: 2.8vw
+    }
+    header {
+        height: 10vw;
+        padding: 2.6vw 8vw 0
+    }
+    header .btnOpenMenu {
+        width: 5.6vw
+    }
+    header .txt {
+        font-size: 2.8vw;
+        margin-left: 4vw
+    }
+    header .menuHide {
+        width: 60vw;
+        font-size: 2.8vw;
+        min-height: 60vw;
+        padding-top: 10vw
+    }
+    header .menuHide ul {
+        width: 60vw;
+        padding: 0 8vw
+    }
+    header .menuHide ul li {
+        height: 10vw;
+        line-height: 10vw
+    }
+    header .menuLeft {
+        left: -60vw
+    }
+    header .menuLeft .btnCloseMenu {
+        width: 5.6vw;
+        height: 4.8vw;
+        top: 2.6vw;
+        left: 8vw
+    }
+    header .menuLeft ul li a .icon {
+        width: 3.6vw;
+        margin-right: 4vw
+    }
+    header .menuRight .btnLogin {
+        width: 3.6vw;
+        top: 2.6vw;
+        right: 8vw
+    }
+    header .menuRight .afterLogin {
+        height: 10vw;
+        right: -60vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin {
+        top: 10vw;
+        right: -60vw;
+        height: 50vw
+    }
+    header .menuRight .afterLogin .menuAfterLogin .icon {
+        margin: 0 0 0 1vw
+    }
+    header .menuRight .afterLogin .helloUser {
+        height: 10vw;
+        line-height: 10vw;
+        padding-right: 8vw
+    }
+    header .menuRight .afterLogin span {
+        margin-right: 1vw
+    }
+    header .menuRight .afterLogin .icon {
+        width: 3.2vw
+    }
+    header .menuRight .afterLogin .userName:after {
+        margin-left: 1vw;
+        border-left: 1vw solid transparent;
+        border-right: 1vw solid transparent;
+        border-top: 1vw solid #4ae627
+    }
+    #slider {
+        height: 40vw
+    }
+    #slider .item {
+        height: 40vw
+    }
+    #slider .owl-controls {
+        height: 13vw;
+        margin-top: -6.4vw
+    }
+    #slider .owl-controls .owl-buttons>div {
+        width: 6.8vw;
+        height: 13vw
+    }
+    #slider .owl-controls .owl-buttons .owl-next {
+        right: 12vw
+    }
+    #slider .owl-controls .owl-buttons .owl-prev {
+        left: 12vw
+    }
+    #notify {
+        height: 10vw;
+        line-height: 10vw
+    }
+    #notify .txtNotify {
+        margin-left: 18vw
+    }
+    #notify .i_hot {
+        width: 16vw;
+        top: -4vw
+    }
+    .gameList {
+        margin-top: 10vw
+    }
+    .gameList .caption {
+        font-size: 6.4vw;
+        text-align: center
+    }
+    .gameList #searchGame {
+        position: relative;
+        right: inherit;
+        margin-top: 6vw;
+        width: 100%
+    }
+    .gameList #searchGame input {
+        width: 90%;
+        display: block;
+        margin: auto;
+        height: 7vw;
+        padding-left: 2vw
+    }
+    .gameList .showGames {
+        margin-top: 6vw
+    }
+    .gameList .showGames .gameBlock {
+        padding: 6vw 0 0
+    }
+    .gameList .showGames .gameBlock .game {
+        width: 50%;
+        margin-bottom: 6vw
+    }
+    .gameList .showGames .gameBlock .game:nth-child(4),
+    .gameList .showGames .gameBlock .game:nth-child(5) {
+        margin-top: 0
+    }
+    .gameList .showGames .gameBlock .game .game_icon {
+        width: 30vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon img {
+        -webkit-border-radius: 8vw;
+        -moz-border-radius: 8vw;
+        border-radius: 8vw
+    }
+    .gameList .showGames .gameBlock .game .game_name {
+        padding: 0 2vw;
+        margin-top: 4vw
+    }
+    .gameList .page {
+        margin-top: 10vw
+    }
+    .gameList .page ul li {
+        width: 5vw;
+        height: 5vw;
+        line-height: 5vw
+    }
+    footer {
+        margin-top: 14vw;
+        padding: 6vw 0 12vw
+    }
+    footer .fixCen {
+        padding: 0 4vw
+    }
+}
+
+@media (max-width:360px) {
+    body,
+    html {
+        font-size: 3.88889vw
+    }
+    header {
+        height: 13.88889vw;
+        padding: 3.61111vw 2.77778vw 0
+    }
+    header .btnOpenMenu {
+        width: 7.77778vw
+    }
+    header .txt {
+        font-size: 3.88889vw;
+        margin-left: 5.55556vw
+    }
+    header .menuHide {
+        width: 100%;
+        font-size: 3.88889vw;
+        min-height: 69.44444vw;
+        padding-top: 13.88889vw
+    }
+    header .menuHide ul {
+        width: 83.33333vw;
+        padding: 0 11.11111vw
+    }
+    header .menuHide ul li {
+        height: 13.88889vw;
+        line-height: 13.88889vw
+    }
+    header .menuLeft {
+        left: -100%
+    }
+    header .menuLeft .btnCloseMenu {
+        width: 7.77778vw;
+        height: 6.66667vw;
+        top: 3.61111vw;
+        left: 2.77778vw
+    }
+    header .menuLeft ul li a .icon {
+        width: 5vw;
+        margin-right: 5.55556vw
+    }
+    header .menuRight .btnLogin {
+        width: 5vw;
+        top: 3.61111vw;
+        right: 2.77778vw
+    }
+    header .menuRight .afterLogin {
+        width: 100%;
+        height: 13.88889vw;
+        right: -100%
+    }
+    header .menuRight .afterLogin .menuAfterLogin {
+        top: 13.88889vw;
+        right: -100%;
+        height: auto
+    }
+    header .menuRight .afterLogin .menuAfterLogin .icon {
+        margin: 0 0 0 1.38889vw
+    }
+    header .menuRight .afterLogin .helloUser {
+        height: 13.88889vw;
+        line-height: 13.88889vw;
+        padding-right: 2.77778vw;
+        width: 60%;
+        float: right
+    }
+    header .menuRight .afterLogin span {
+        margin-right: 1.38889vw
+    }
+    header .menuRight .afterLogin .icon {
+        width: 4.44444vw
+    }
+    header .menuRight .afterLogin .userName:after {
+        margin-left: 1.38889vw;
+        border-left: 1.38889vw solid transparent;
+        border-right: 1.38889vw solid transparent;
+        border-top: 1.38889vw solid #4ae627
+    }
+    #slider {
+        height: 41.66667vw
+    }
+    #slider .item {
+        height: 41.66667vw
+    }
+    #slider .owl-controls {
+        height: 11.11111vw;
+        margin-top: -5.55556vw
+    }
+    #slider .owl-controls .owl-buttons>div {
+        width: 5.55556vw;
+        height: 11.11111vw
+    }
+    #slider .owl-controls .owl-buttons .owl-next {
+        right: 5.55556vw
+    }
+    #slider .owl-controls .owl-buttons .owl-prev {
+        left: 5.55556vw
+    }
+    #notify {
+        height: 13.88889vw;
+        line-height: 13.88889vw
+    }
+    #notify .txtNotify {
+        margin-left: 16.66667vw
+    }
+    #notify .i_hot {
+        width: 13.88889vw;
+        top: 0
+    }
+    .gameList {
+        margin-top: 13.88889vw
+    }
+    .gameList .caption {
+        font-size: 8.88889vw;
+        text-align: center
+    }
+    .gameList #searchGame {
+        position: relative;
+        right: inherit;
+        margin-top: 8.33333vw;
+        width: 100%
+    }
+    .gameList #searchGame input {
+        width: 90%;
+        display: block;
+        margin: auto;
+        height: 9.72222vw;
+        padding-left: 2.77778vw
+    }
+    .gameList .showGames {
+        margin-top: 8.33333vw
+    }
+    .gameList .showGames .gameBlock {
+        padding: 8.33333vw 0 0
+    }
+    .gameList .showGames .gameBlock .game {
+        width: 50%;
+        margin-bottom: 8.33333vw
+    }
+    .gameList .showGames .gameBlock .game:nth-child(4),
+    .gameList .showGames .gameBlock .game:nth-child(5) {
+        margin-top: 0
+    }
+    .gameList .showGames .gameBlock .game .game_icon {
+        width: 41.66667vw
+    }
+    .gameList .showGames .gameBlock .game .game_icon img {
+        -webkit-border-radius: 11.11111vw;
+        -moz-border-radius: 11.11111vw;
+        border-radius: 11.11111vw
+    }
+    .gameList .showGames .gameBlock .game .game_name {
+        padding: 0 2.77778vw;
+        margin-top: 5.55556vw
+    }
+    .gameList .page {
+        margin-top: 13.88889vw
+    }
+    .gameList .page ul li {
+        width: 6.94444vw;
+        height: 6.94444vw;
+        line-height: 6.94444vw
+    }
+    footer {
+        margin-top: 19.44444vw;
+        padding: 8.33333vw 0 16.66667vw
+    }
+    footer .fixCen {
+        padding: 0 5.55556vw
+    }
+}
+
+@media screen and (min-width: 567px) and (orientation: landscape){
+    body.framework7-root {
+        max-width: none !important;
+    }
+}
+
+.list-game .navbar-fixed .page-content {
+    padding-top: 0;
+}
+
+.framework7-root .navbar,.framework7-root .subnavbar,.framework7-root .toolbar {
+    background: #2ea813;
+}
+
+.framework7-root .button.button-fill {
+    background-color: #2ea813;
+}
+
+.framework7-root .card-bank .buttons-row .tab-link.active {
+    background: #2ea813;
+    border-color: #2ea813;
+}
+
+.framework7-root .panel-left .page, .framework7-root .page .navbar {
+    background-color: #2ea813;
+}
+
+header {
+    height: 56px;
+    padding: 16px !important;
+}
+
+.swiper-container {
+    margin-top: -56px;
+}
+
+#listGame .game {
+    width: 20%;
+    padding: 10px 50px;
+}
+
+#listGame .game.not-hot-new {
+    padding-top: 35px;
+}
+
+#listGame a.game_name {
+    color: #24830f;
+    padding: 0 .52083vw;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#listGame a.warning {
+    color: black;
+    padding: 0 .52083vw;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    #listGame .game {
+        width: 33%;
+        padding: 10px 40px;
+    }
+
+    #listGame .game.not-hot-new {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    #listGame .game {
+        width: 50%;
+        padding: 10px 50px;
+    }
+
+    #listGame .game.not-hot-new {
+        padding-top: 35px;
+    }
+}
+
+.iNew {
+    background-image: url(../images/i_new.gif);
+    background-size: cover;
+    width: 50px;
+    height: 25px;
+    display: block;
+    /* margin: 0 auto; */
+    position: relative;
+    top: 15px;
+    left: calc(100% - 35px);
+}
+
+.iHot {
+    background: url(../images/i_hot.gif) no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 25px;
+    display: block;
+    /* margin: 0 auto; */
+    position: relative;
+    top: 15px;
+    left: calc(100% - 35px);
+}
+
+footer a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
